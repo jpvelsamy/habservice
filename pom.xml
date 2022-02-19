@@ -12,6 +12,9 @@
 		<java.version>11</java.version>
 		<google.people.version>v1-rev537-1.25.0</google.people.version>
 		<google.cal.version>v3-rev411-1.25.0</google.cal.version>
+		<logback.version>1.2.3</logback.version>
+		<slfj.version>1.7.25</slfj.version>
+		<logbackjson.version>0.1.5</logbackjson.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -34,6 +37,33 @@
 			<groupId>com.google.apis</groupId>
 			<artifactId>google-api-services-calendar</artifactId>
 			<version>${google.cal.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slfj.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-ext</artifactId>
+			<version>${slfj.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback.contrib</groupId>
+			<artifactId>logback-json-classic</artifactId>
+			<version>${logbackjson.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback.contrib</groupId>
+			<artifactId>logback-jackson</artifactId>
+			<version>${logbackjson.version}</version>
+			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
 </project>
