@@ -2,7 +2,7 @@ package goog.contact;
 
 import java.io.Serializable;
 
-public class ContactInfo implements Serializable{
+public class GoogleContactInfo implements Serializable{
 	
 	
 	private static final long serialVersionUID = 4833051882565784182L;

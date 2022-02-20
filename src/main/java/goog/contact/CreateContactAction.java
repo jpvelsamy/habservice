@@ -51,7 +51,7 @@ public class CreateContactAction {
 
 	}
 
-	public ContactCreateResponse execute(Collection<ContactInfo> contactCollection) throws HabServiceException {
+	public ContactCreateResponse execute(Collection<GoogleContactInfo> contactCollection) throws HabServiceException {
 		final AtomicInteger incomingContactCounter = new AtomicInteger();
 		final AtomicInteger addedContactCounter = new AtomicInteger();
 		final ContactCreateResponse response = new ContactCreateResponse();
