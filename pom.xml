@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>calep.hab</groupId>
 	<artifactId>habsvc</artifactId>
-	<version>1.00</version>
+	<version>1.0</version>
 	<name>HabMicroServices</name>
 	<properties>
 		<maven.compiler.source>11</maven.compiler.source>
