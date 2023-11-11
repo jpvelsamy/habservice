@@ -2,6 +2,12 @@ package googleapi;
 
 import java.io.IOException;
 import java.security.GeneralSecurityException;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.Month;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -71,5 +77,32 @@ public class GoogleContactTest {
 			e.printStackTrace();
 		}
 		
+	}
+	
+	@Test
+	public void getCurrentDate()
+	{
+		Instant instant = Instant.now() ;  // Capture the current moment in UTC.
+		ZoneId z = ZoneId.of( "Asia/Kolkata" ) ;
+		ZonedDateTime zdt = instant.atZone( z ) ;  // Same moment, different wall-clock time.
+		
+		int dayOfMonth = zdt.getDayOfMonth();
+		int monthValue = zdt.getMonthValue();
+		int year = zdt.getYear();
+		
+		int hour = zdt.getHour();
+		int minute = zdt.getMinute();
+		int second = zdt.getSecond();
+		
+		System.out.println("Day="+dayOfMonth);
+		System.out.println("Month="+monthValue);
+		System.out.println("Year="+year);
+		System.out.println("Hour="+hour);
+		System.out.println("minute="+minute);
+		System.out.println("second="+second);
+		
+//		LocalDate ld = LocalDate.of( 2018 , Month.JANUARY , 23 ) ;
+//		LocalTime lt = LocalTime.of( 14 , 0 ) ;  // 14:00 = 2 PM.
+//		ZonedDateTime zdt = ZonedDateTime.of( ld , lt , z ) ;
 	}
 }
